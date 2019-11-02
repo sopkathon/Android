@@ -31,13 +31,12 @@ class MainActivity : AppCompatActivity() {
                     pattern, -1
                 )
             }
-            Glide.with(this)
+            /*Glide.with(this)
                 .load(R.drawable.halloween)
-                .into(img)
+                .into(img)*/
 
             Handler().postDelayed({
                 startActivity(Intent(this, QusetionActivity::class.java))
-                finish()
             }, SPLASH_TIME_OUT)
         }
 
