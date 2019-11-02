@@ -22,11 +22,7 @@
         android:id="@+id/img2"
         android:layout_width="253dp"
         android:layout_height="360dp"
-        android:layout_marginLeft="68.6dp"
         android:layout_marginTop="146dp"
-        android:layout_marginRight="67.4dp"
-        android:layout_marginBottom="192dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/img"
         app:layout_constraintTop_toTopOf="@+id/img"
@@ -36,16 +32,10 @@
         android:id="@+id/button"
         android:layout_width="216dp"
         android:layout_height="385dp"
-        android:layout_marginLeft="89.2dp"
-        android:layout_marginTop="191dp"
-        android:layout_marginRight="87.7dp"
-        android:layout_marginBottom="273.2dp"
+        android:layout_marginTop="146dp"
         android:background="#00ff0000"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
