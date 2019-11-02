@@ -45,7 +45,7 @@ class AnswerActivity : AppCompatActivity() {
         //일정시간 지난후엔
         Handler().postDelayed({
             // Image_TIME_OUT초 뒤에 하는 동작
-            answer_card.setBackgroundResource(R.drawable.halloween1)
+            answer_card.setBackgroundResource(R.drawable.answer_img)
             //질문 text 받아오기
             txt_question.text=str_question
             //답 받아오기
@@ -54,7 +54,12 @@ class AnswerActivity : AppCompatActivity() {
         }, IMAGE_TIME_OUT)
 
         //TODO btn setOnClickListener 구성하기
+        img_home.setOnClickListener(){
+           // val intent=Intent(this,MainActivity::class.java)
+            //startActivity(intent)
 
+            finish()
+        }
 
     }
 }
