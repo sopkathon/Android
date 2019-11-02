@@ -16,6 +16,11 @@ class AnswerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
 
+        val intent=getIntent()
+        val str_question=intent.getStringExtra("question")
+        val str_answer=intent.getStringExtra("answer")
+
+
         //화면이 바뀌면 gif시간동안 진동이 울린다
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         val pattern = longArrayOf(100, 300, 100, 700, 300, 2000) // miliSecond
@@ -40,12 +45,12 @@ class AnswerActivity : AppCompatActivity() {
         //일정시간 지난후엔
         Handler().postDelayed({
             // Image_TIME_OUT초 뒤에 하는 동작
-            answer_card.setBackgroundResource(R.drawable.halloween)
+            answer_card.setBackgroundResource(R.drawable.halloween1)
             //질문 text 받아오기
-            txt_question.text=""
+            txt_question.text=str_question
             //답 받아오기
-            txt_answer.text=""
-
+            txt_answer.text=str_answer
+            finish()
         }, IMAGE_TIME_OUT)
 
         //TODO btn setOnClickListener 구성하기
