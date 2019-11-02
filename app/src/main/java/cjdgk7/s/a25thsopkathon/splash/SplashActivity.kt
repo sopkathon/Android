@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Glide.with(this)
-            .load(R.drawable)
+            .load(R.drawable.pumpkin)
             .into(splash_animation)
 
         // 스플래쉬를 유지하는 핸들러
