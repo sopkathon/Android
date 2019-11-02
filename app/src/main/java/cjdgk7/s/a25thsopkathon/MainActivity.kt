@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 .into(img)
 
             Handler().postDelayed({
-                startActivity(Intent(this, AnswerActivity::class.java))
+                startActivity(Intent(this, QusetionActivity::class.java))
                 finish()
             }, SPLASH_TIME_OUT)
         }
