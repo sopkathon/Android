@@ -18,7 +18,7 @@
 
 
         <RelativeLayout
-            android:layout_width="262dp"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="264dp"
             android:layout_centerHorizontal="true"
@@ -48,13 +48,14 @@
                     android:paddingHorizontal="16dp"
                     android:fontFamily="@font/bmjua_ttf"
                     android:textColor="#1e1e24"
+                    android:maxLength="20"
                     android:textSize="18sp"
                     android:lineHeight="20sp"/>
                 <ImageView
                     android:id="@+id/btn_ok"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/txt_user_question"
                     android:src="@drawable/input_icon"/>
             </RelativeLayout>
