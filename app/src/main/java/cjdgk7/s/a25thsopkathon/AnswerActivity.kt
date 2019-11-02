@@ -9,16 +9,14 @@ import kotlinx.android.synthetic.main.activity_answer.*
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class AnswerActivity : AppCompatActivity() {
-    // gif를 보여주는 시간
-    val IMAGE_TIME_OUT: Long = 2000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
 
-        val intent=getIntent()
-        var str_question=intent.getStringExtra("question")
-        var str_answer=intent.getStringExtra("answer")
+        var str_question: String = intent.getStringExtra("question")
+        var str_answer: String = intent.getStringExtra("answer")
+
 
 
         //화면이 바뀌면 gif시간동안 진동이 울린다
@@ -37,20 +35,13 @@ class AnswerActivity : AppCompatActivity() {
             // 0 : 무한반복, -1: 반복없음,
             // 양의정수 : 진동패턴배열의 해당 인덱스부터 진동 무한반복
         }
+        answer_card.setBackgroundResource(R.drawable.answer_img)
+        //질문 text 받아오기
+        txt_question.text=str_question
+        //답 받아오기
+        txt_answer.text=str_answer
 
 
-        //일정시간 지난후엔
-        Handler().postDelayed({
-            // Image_TIME_OUT초 뒤에 하는 동작
-            answer_card.setBackgroundResource(R.drawable.answer_img)
-            //질문 text 받아오기
-            txt_question.text=str_question
-            //답 받아오기
-            txt_answer.text=str_answer
-            finish()
-        }, IMAGE_TIME_OUT)
-
-        //TODO btn setOnClickListener 구성하기
         img_home.setOnClickListener(){
            // val intent=Intent(this,MainActivity::class.java)
             //startActivity(intent)

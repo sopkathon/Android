@@ -18,9 +18,9 @@
 
 
         <RelativeLayout
-            android:layout_width="338dp"
+            android:layout_width="262dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="264dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/question_radius_background">
 
@@ -41,12 +41,12 @@
                 android:layout_below="@+id/imageView5">
                 <EditText
                     android:id="@+id/txt_user_question"
-                    android:layout_width="254dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/question_border"
-                    android:paddingVertical="16dp"
-                    android:paddingHorizontal="16dp"
-                    android:hint="안녕안녕안녕안녕안녕"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="12dp"
+                    android:hint="안녕안녕안녕"
                     android:textColor="#1e1e24"
                     android:textSize="18sp"
                     android:lineHeight="20sp"/>
