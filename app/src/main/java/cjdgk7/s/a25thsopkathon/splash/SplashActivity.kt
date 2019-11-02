@@ -21,9 +21,9 @@ class SplashActivity : AppCompatActivity() {
         setTheme(android.R.style.Theme_NoTitleBar_Fullscreen)
         setContentView(R.layout.activity_splash)
 
-        /*Glide.with(this)
-            .load(R.drawable)
-            .into(splash_animation)*/
+        Glide.with(this)
+            .load(R.drawable.pumpkin)
+            .into(splash_animation)
 
         // 스플래쉬를 유지하는 핸들러
         Handler().postDelayed({
