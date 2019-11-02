@@ -32,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
 
 
             // SPLASH_TIME_OUT초 뒤에 하는 동작
-            startActivity(Intent(this, AnswerActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, SPLASH_TIME_OUT)
     }
