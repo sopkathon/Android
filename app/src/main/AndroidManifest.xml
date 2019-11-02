@@ -15,8 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AnswerActivity"></activity>
-        <activity android:name=".splash.SplashActivity"></activity>
-        <activity android:name=".QusetionActivity">
+        <activity android:name=".QusetionActivity"></activity>
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

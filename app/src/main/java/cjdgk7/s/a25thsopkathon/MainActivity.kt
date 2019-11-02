@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity() {
                     pattern, -1
                 )
             }
-            Glide.with(this)
+            /*Glide.with(this)
                 .load(R.drawable.halloween)
-                .into(imageView)
+                .into(img)*/
 
             Handler().postDelayed({
                 startActivity(Intent(this, QusetionActivity::class.java))
