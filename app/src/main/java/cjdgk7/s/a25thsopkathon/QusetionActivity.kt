@@ -9,7 +9,7 @@ import cjdgk7.s.a25thsopkathon.data.PostQuestionRequest
 import cjdgk7.s.a25thsopkathon.data.PostQuestionResponse
 import cjdgk7.s.a25thsopkathon.network.ApplicationController
 import cjdgk7.s.a25thsopkathon.network.NetworkService
-import kotlinx.android.synthetic.main.activity_qusetion.*
+import kotlinx.android.synthetic.main.activity_question.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import retrofit2.Call
@@ -24,7 +24,7 @@ class QusetionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_qusetion)
+        setContentView(R.layout.activity_question)
 
         setOnBtnClickListener()
     }
@@ -39,20 +39,26 @@ class QusetionActivity : AppCompatActivity() {
         }
     }
 
-    private fun postQuestionResponse(question: String) {
+    private fun postQuestionResponse(input: String) {
+        Log.e("123", "postQuestion 통신")
         val postQuestionResponse: Call<PostQuestionResponse> =
-            networkService.postQuestionResponse("application/json", PostQuestionRequest(question))
+            networkService.postQuestionResponse("application/json", PostQuestionRequest(input))
         postQuestionResponse.enqueue(object : Callback<PostQuestionResponse> {
 
             override fun onFailure(call: Call<PostQuestionResponse>, t: Throwable) {
-                Log.e("Question failed", t.toString())
+                Log.e("Q", "Question failed")
             }
 
-            override fun onResponse(call: Call<PostQuestionResponse>, response: Response<PostQuestionResponse>) {
+            override fun onResponse(
+                call: Call<PostQuestionResponse>,
+                response: Response<PostQuestionResponse>
+            ) {
                 // 성공
+                Log.e("1", "1")
                 response?.takeIf { it.isSuccessful }
                     ?.body()?.takeIf { it.status == 200 }
                     ?.let {
+                        Log.e("1", "2")
                         val intent = Intent()
                         var question = txt_user_question.text.toString()
                         var answer = response.body()!!.message
@@ -60,14 +66,15 @@ class QusetionActivity : AppCompatActivity() {
                         intent.putExtra("question", question)
                         intent.putExtra("answer", answer)
                         startActivity<AnswerActivity>()
-                        Log.v("보내기성공?", "보내기성공?")
+                        finish()
+                        Log.e("보내기성공?", "보내기성공?")
                     }
 
                 // 실패
                 response?.takeIf { it.isSuccessful }
                     ?.body()?.takeIf { it.status == 500 }
                     ?.let {
-                        toast("server err")
+                        Log.e("1", "111111")
                     }
             }
         })
@@ -77,7 +84,9 @@ class QusetionActivity : AppCompatActivity() {
         if (question == "") {
             Log.e("fail", "fail")
             return false
+        } else {
+            return true
+            Log.e("success", "success")
         }
-        else return true
     }
 }
