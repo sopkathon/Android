@@ -8,14 +8,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scaleType="fitEnd"
             android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-52dp"
+            android:scaleType="fitEnd"
             app:srcCompat="@drawable/green_graphic_down_img" />
-
 
         <RelativeLayout
             android:layout_width="260dp"
@@ -40,6 +42,8 @@
                 android:layout_marginBottom="24dp"
                 android:layout_below="@+id/imageView5">
                 <EditText
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:textCursorDrawable="@drawable/text_cursor"
                     android:id="@+id/txt_user_question"
                     android:layout_width="190dp"
                     android:layout_height="wrap_content"

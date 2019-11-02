@@ -15,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
 
 
     // 스플래쉬를 보여주는 시간
-    val SPLASH_TIME_OUT: Long = 8000
+    val SPLASH_TIME_OUT: Long = 2500
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,13 +23,11 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Glide.with(this)
-            .load(R.drawable.pumpkin)
+            .load(R.drawable.splash)
             .into(splash_animation)
 
         // 스플래쉬를 유지하는 핸들러
         Handler().postDelayed({
-
-
 
             // SPLASH_TIME_OUT초 뒤에 하는 동작
             startActivity(Intent(this, MainActivity::class.java))

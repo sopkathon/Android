@@ -17,9 +17,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-        val SPLASH_TIME_OUT: Long = 3000
+        val SPLASH_TIME_OUT: Long = 3500
 
         button.setOnClickListener() {
+            Glide.with(this)
+                .load(R.drawable.ghost)
+                .into(img)
+
             val pattern = longArrayOf(100, 300, 100, 700, 300, 2000)
 
             if (Build.VERSION.SDK_INT >= 26) {
@@ -31,13 +35,11 @@ class MainActivity : AppCompatActivity() {
                     pattern, -1
                 )
             }
-            /*Glide.with(this)
-                .load(R.drawable.halloween)
-                .into(img)*/
+
 
             Handler().postDelayed({
+                img.setImageResource(R.drawable.door_btn)
                 startActivity(Intent(this, QusetionActivity::class.java))
-                finish()
             }, SPLASH_TIME_OUT)
         }
 

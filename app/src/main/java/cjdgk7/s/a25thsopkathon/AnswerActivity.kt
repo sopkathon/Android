@@ -37,9 +37,9 @@ class AnswerActivity : AppCompatActivity() {
         }
         answer_card.setBackgroundResource(R.drawable.answer_img)
         //질문 text 받아오기
-        txt_question.text=str_question
+        txt_question.text="Q. "+str_question
         //답 받아오기
-        txt_answer.text=str_answer
+        txt_answer.text="A. "+str_answer
 
 
         img_home.setOnClickListener(){
