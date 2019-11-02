@@ -8,7 +8,7 @@ import retrofit2.http.Header
 import retrofit2.http.POST
 
 interface NetworkService {
-    @POST("auth/question")
+    @POST("input")
     fun postQuestionResponse(
         @Header("Content-Type") content_type: String,
         @Body body: PostQuestionRequest

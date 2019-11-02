@@ -7,34 +7,21 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/img"
-        android:layout_width="256dp"
-        android:layout_height="156dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="231dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="231dp"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cat" />
+        app:srcCompat="@drawable/bg_img" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="258dp"
         android:layout_height="158dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="231dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="231dp"
         android:background="#00ff0000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.495" />
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="342dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
