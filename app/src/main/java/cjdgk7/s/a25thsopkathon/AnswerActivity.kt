@@ -3,6 +3,7 @@ package cjdgk7.s.a25thsopkathon
 import android.content.Context
 import android.content.Intent
 import android.os.*
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_answer.*
@@ -16,10 +17,13 @@ class AnswerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
 
-        val intent=getIntent()
-        val str_question=intent.getStringExtra("question")
-        val str_answer=intent.getStringExtra("answer")
+        var str_question: String = intent.getStringExtra("question")
+        var str_answer: String = intent.getStringExtra("answer")
 
+        //질문 text 받아오기
+        txt_question.text = str_question
+        //답 받아오기
+        txt_answer.text = str_answer
 
         //화면이 바뀌면 gif시간동안 진동이 울린다
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
@@ -38,24 +42,23 @@ class AnswerActivity : AppCompatActivity() {
             // 양의정수 : 진동패턴배열의 해당 인덱스부터 진동 무한반복
         }
         //액티비티가 켜질떄는 gif
-        Glide.with(this)
+        /* Glide.with(this)
             .load(R.drawable.pumpkin)
             .into(answer_card)
-
-        //일정시간 지난후엔
+          */
+       /* //일정시간 지난후엔
         Handler().postDelayed({
             // Image_TIME_OUT초 뒤에 하는 동작
             answer_card.setBackgroundResource(R.drawable.answer_img)
-            //질문 text 받아오기
-            txt_question.text=str_question
+//질문 text 받아오기
+            txt_question.text = str_question
             //답 받아오기
-            txt_answer.text=str_answer
-            finish()
-        }, IMAGE_TIME_OUT)
+            txt_answer.text = str_answer
+        }, IMAGE_TIME_OUT)*/
 
         //TODO btn setOnClickListener 구성하기
-        img_home.setOnClickListener(){
-           // val intent=Intent(this,MainActivity::class.java)
+        img_home.setOnClickListener() {
+            // val intent=Intent(this,MainActivity::class.java)
             //startActivity(intent)
 
             finish()

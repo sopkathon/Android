@@ -59,15 +59,16 @@ class QusetionActivity : AppCompatActivity() {
                     ?.body()?.takeIf { it.status == 200 }
                     ?.let {
                         Log.e("1", "2")
-                        val intent = Intent()
+                        val intent = Intent(this@QusetionActivity, AnswerActivity::class.java)
                         var question = txt_user_question.text.toString()
                         var answer = response.body()!!.message
 
-                        intent.putExtra("question", question)
+                        intent.putExtra("question", question.toString())
                         intent.putExtra("answer", answer)
-                        startActivity<AnswerActivity>()
+                        startActivityForResult(intent, 0)
                         finish()
-                        Log.e("보내기성공?", "보내기성공?")
+                        Log.e("보내기성공?", question)
+                        Log.e("보내기성공?", answer)
                     }
 
                 // 실패
