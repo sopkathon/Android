@@ -46,7 +46,7 @@ class QusetionActivity : AppCompatActivity() {
         postQuestionResponse.enqueue(object : Callback<PostQuestionResponse> {
 
             override fun onFailure(call: Call<PostQuestionResponse>, t: Throwable) {
-                Log.e("Q", "Question failed")
+                Log.e("Q", "Question failed $t")
             }
 
             override fun onResponse(

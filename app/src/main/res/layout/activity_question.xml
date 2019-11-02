@@ -45,8 +45,8 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/question_border"
                     android:paddingVertical="8dp"
-                    android:paddingHorizontal="12dp"
-                    android:hint="안녕안녕안녕"
+                    android:paddingHorizontal="16dp"
+                    android:fontFamily="@font/bmjua_ttf"
                     android:textColor="#1e1e24"
                     android:textSize="18sp"
                     android:lineHeight="20sp"/>
