@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import cjdgk7.s.a25thsopkathon.AnswerActivity
 import cjdgk7.s.a25thsopkathon.MainActivity
 import cjdgk7.s.a25thsopkathon.R
 import com.bumptech.glide.Glide
@@ -31,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
 
 
             // SPLASH_TIME_OUT초 뒤에 하는 동작
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, AnswerActivity::class.java))
             finish()
         }, SPLASH_TIME_OUT)
     }
