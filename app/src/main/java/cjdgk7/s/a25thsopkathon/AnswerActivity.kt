@@ -17,8 +17,8 @@ class AnswerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_answer)
 
         val intent=getIntent()
-        val str_question=intent.getStringExtra("question")
-        val str_answer=intent.getStringExtra("answer")
+        var str_question=intent.getStringExtra("question")
+        var str_answer=intent.getStringExtra("answer")
 
 
         //화면이 바뀌면 gif시간동안 진동이 울린다
@@ -37,10 +37,7 @@ class AnswerActivity : AppCompatActivity() {
             // 0 : 무한반복, -1: 반복없음,
             // 양의정수 : 진동패턴배열의 해당 인덱스부터 진동 무한반복
         }
-        //액티비티가 켜질떄는 gif
-        Glide.with(this)
-            .load(R.drawable.pumpkin)
-            .into(answer_card)
+
 
         //일정시간 지난후엔
         Handler().postDelayed({
